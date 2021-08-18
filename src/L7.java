@@ -1,4 +1,5 @@
 import java.text.DecimalFormat;  //importing the class from the package
+//import java.text*
 
 public class L7{
 
@@ -22,6 +23,20 @@ public class L7{
         //METHOD 2: OUTPUT BY CALLING THE METHOD IN THE PRINTLN COMMAND
 
         //using the roundTo2 object to call the format method from the DecimalFormat class.
-        System.out.println("The number rounded to 3 decimals is " + roundTo3.format(number));
-    }
+
+  System.out.println("The number rounded to 3 decimals is " + roundTo3.format(number));
+       DecimalFormat currency= new DecimalFormat("$#,###.00");
+        System.out.println("You have: " + currency.format(number));
+        System.out.println("You have: " + currency.format(123456789));
+
+        DecimalFormat percentage = new DecimalFormat("00%");
+        System.out.println("Sales tax is "+ percentage.format(0.7));
+        System.out.println("Sales tax is "+ percentage.format(number));
+
+        DecimalFormat crazy= new DecimalFormat("THIS IS JUST NUTS $#,###.00");
+        System.out.println(crazy.format(1234567889.23569));
+
+        System.out.println(currency.format(500*1.05));
+
+        }
 }
